@@ -31,7 +31,12 @@ class OmsHelper
 {
 
 
-	// YOUR CUSTOM CODE HERE
+	static function debug($param) {
+		echo "<pre>";
+		print_r($param);
+		echo "</pre>";
+		die();;
+	}
 
 
 }

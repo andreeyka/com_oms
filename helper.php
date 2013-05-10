@@ -18,8 +18,7 @@
 
 // No direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
-
-// Your custom code here
+require_once (JPATH_COMPONENT.DS.'helpers/oms.php');
 
 
 

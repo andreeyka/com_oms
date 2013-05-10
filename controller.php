@@ -22,7 +22,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 jimport('joomla.application.component.controller');
 
-class omsController extends JController
+class omsController extends JControllerLegacy
 {
 	/**
 	 * Custom Constructor
@@ -30,27 +30,25 @@ class omsController extends JController
 
 	function __construct()
 	{
+		
+		$vName	 = JRequest::getCmd('view', 'orders');
+		JRequest::setVar('view', $vName);
+		
+		
 		parent::__construct();
-		
-		$this->registerTask( 'add' , 'edit' );
-		
+	
 	}
 	
 	/**
 	 * display the edit form
 	 * @return void
 	 */
-	function edit()
+	function display()
 	{
-		JRequest::setVar( 'layout', 'form'  );
-		JRequest::setVar( 'hidemainmenu', 1);
-
 		parent::display();
 	}
 
 
-	// Your custom code here
 
-
-} // End class Controller
+} 
 ?>

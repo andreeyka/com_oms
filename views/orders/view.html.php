@@ -24,7 +24,7 @@ jimport( 'joomla.application.component.view' );
 /**
  * View class
  */
-class omsViewOms extends Jview
+class omsVieworders extends Jview
 {
 
 
@@ -35,7 +35,7 @@ class omsViewOms extends Jview
 	  // YOUR CUSTOM CODE HERE
     
     // $this->assignRef('items', $items);
-		
+		OmsHelper::debug($this);
 		parent::display($tpl);
 
 	}
